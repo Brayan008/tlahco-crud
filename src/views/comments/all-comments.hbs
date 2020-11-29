@@ -1,0 +1,21 @@
+<h1 style=" text-align: center;font-family: Georgia, 'Times New Roman', Times, serif;">Tlahco - Mis comentarios</h1>
+<button class="btn btn-info"><a href="/tlahco" style="text-decoration: none; color: white;">Inicio</a></button>
+<button class="btn btn-warning"><a href="/tlahco/add" style="text-decoration: none; color: white;">Agregar Comentario</a></button>
+
+<div class="row" style="margin: 10px;">
+    {{#each coments}}
+    <div class="card" style="margin: 10px;">
+        <div class="card-body">
+            <h4 class="card-title">{{title}}<a href="/tlahco/edit/{{_id}}"><i class="fa fa-pencil"></i></a></h4>
+            <h5 style="float: left; margin: 1%;"><span class="badge badge-warning">{{user}}</span>
+                <h5 style="padding-top: 2%; margin: 1%; font-size: 14px ;color: rgb(194, 193, 193);">{{updatedAt}}</h5>
+                <p class="card-text">{{description}}</p>
+
+                <form action="/tlahco/delete/{{_id}}?_method=DELETE" method="POST">
+                    <input type="hidden" name="method" value="DELETE">
+                    <button type="submit" class="btn btn-danger btn-sm">DELETE </button>
+                </form>
+        </div>
+    </div>
+    {{/each}}
+</div>

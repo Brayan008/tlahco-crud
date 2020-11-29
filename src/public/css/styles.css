@@ -1,0 +1,367 @@
+@font-face{
+    font-family: "mayan";
+    src: url("fonts/mayansquare.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@keyframes ring {
+  0% {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+  }
+  100% {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+  }
+}
+/*Generales*/
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/*MENUTACOS*/
+#navbar #logo:hover{
+    transform: scale(1.1);
+    transition: all 300ms;
+}
+
+.pro li{
+  list-style: none;
+}
+
+.pro{
+  box-shadow: 0px 0px 5px #cccccc;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.pro .info{
+    position: absolute;
+    width: 100%;
+}
+
+.pro .info h4{
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+    font-family: "mayan";
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.pro:hover{
+    transform: scale(1.1);
+}
+/*LISTA MENU TACOS*/
+#menuTacos #tituloMenu{
+  text-align: center;
+  font-family: "mayan";
+  text-transform: uppercase;
+  letter-spacing: 50px;
+  font-size: 80px;
+  text-shadow: 2px 4px 4px #a7a7a7;
+  }
+  #menuTacos .info ul{
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(37, 2, 2, 0.918);
+  }
+  #menuTacos .info ul li{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 20px;
+    color: white;
+  }
+
+#menuTacos .pro img{
+    border: 1px ;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+#menuTacos .pro img:hover{
+    opacity: 0.2;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  -ms-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+/*SEPARADOR*/
+.txtSeparador{
+  text-align: center;
+  font-size: 30px;
+  color:#cccccc;
+}
+.trans--grow{
+  -webkit-transition: width 1s ease-out; /* For Safari 3.1 to 6.0 */
+  transition: width 1s  ease-out;
+  width : 0%;
+}
+.grow{
+  width:100%;
+}
+.hr1{
+  margin-left:0;
+}
+.hr2{
+  margin-right:0;
+}
+hr{
+  margin-top: 10spx;
+  padding: 2px 0;
+  border: none;
+  background-color: rgb(83, 4, 4);
+  letter-spacing: 5px;
+}
+
+/*Navbar*/
+#menu {
+    margin: 0 auto;
+    margin-top: 50px;
+    }
+   
+  #menu ul  {
+    list-style: none;
+    margin: 0;
+    }
+   
+  #menu ul li {
+    margin: 0;
+    float: left;
+    }
+   
+  #menu ul li a {
+    font-family: "mayan";
+    margin:0 2px;
+    width: 180px;
+    font-size:1.5em;
+    text-align: center;
+    line-height: 40px;
+    display:block;
+    text-decoration: none
+    }
+   
+  #menu ul li a:hover {
+    color:rgb(255, 255, 255);
+    transition: all 600ms;
+    transform: scale(1.1);
+    }
+   
+  #item-uno a {
+    border-bottom:5px solid rgb(83, 4, 4);
+    color: rgb(83, 4, 4)
+    }
+   
+  #item-dos a {
+    border-bottom:5px solid rgb(83, 4, 4);
+    color: rgb(83, 4, 4)
+    }
+   
+  #item-tres a {
+    border-bottom:5px solid rgb(83, 4, 4);
+    color: rgb(83, 4, 4)
+    }
+   
+  #item-uno a:hover {
+    background:rgba(94, 5, 5, 0.705);
+    transition: all 600ms;
+    transform: scale(1.1);
+    }
+   
+  #item-dos a:hover {
+    background:rgba(94, 5, 5, 0.705);
+    transition: all 600ms;
+    transform: scale(1.1);
+    }
+   
+  #item-tres a:hover {
+    background:rgba(94, 5, 5, 0.705);
+    transition: all 600ms;
+    transform: scale(1.1);
+    }
+   
+/*BOTON CARRITO*/
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.button {
+  min-width: 100px;
+  min-height: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgb(94, 5, 5);
+background: linear-gradient(90deg, rgb(94, 4, 4) 0%, rgb(145, 6, 6) 100%);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(165, 5, 5, 0.705);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+.button::before {
+content: '';
+  border-radius: 10px;
+  min-width: 100px;
+  min-height: 60px;
+  box-shadow: 0 0 60px rgba(129, 2, 2, 0.705);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: #ffffff;
+  transform: translateY(-6px);
+}
+
+.button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+.button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 3px solid rgba(63, 2, 2, 0.705);
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+/*REDES SOCIALES*/
+.cartera, .tarjeta, .tarjeta a {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+    /* Contenedor general */
+    .cartera {
+      z-index: 1;
+    position: fixed;
+    width: 100%;
+    max-width: 300px;
+    right: 0;
+    text-align: center;
+    line-height: 56px;
+    font-size: 14px;
+    font-family: sans-serif;
+    }
+    /* Cada tarjeta */
+    .tarjeta {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    }
+    /* Estado normal */
+    .tarjeta a {
+    position: relative;
+    display: block;
+    top: -6px;
+    left: 50%;
+    width: 56%;
+    padding: 0 0 0 16px;
+    line-height: 32px;
+    font-weight: normal;
+    border-radius: 16px 16px 0 0;
+    text-decoration: none;
+    box-shadow: 0 -2px 2px rgba(0,0,0,.1), 0 0 20px rgba(0,0,0,.2) inset;
+    text-shadow: black 0.1em 0.1em 0.2em;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    transition: all .2s linear;
+    }
+
+.comentarios{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+      margin-left: 150px;
+    }
+
+    .comentarios a{
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      text-shadow: 1px 1px 2px black;
+      margin-top: 100px;
+      margin-bottom: 10px;
+    }
+
+    #mcome{
+      margin-bottom: -50px;
+    }
+    /* Elevación de las tarjetas */
+    .tarjeta a:hover {
+    line-height: 52px;
+    top: -26px;
+    text-decoration: none;
+    }
+    /* Logos */
+    .tarjeta a:before { 
+    display: inline-block; *display: inline; zoom: 1;
+    width: 20px;
+    margin-right: 10px;
+    text-align: center;
+    font-family: Fontawesome;
+    font-size: 18px;
+    }
+    /* Sombra parte inferior */
+    .tarjeta a:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 32%;
+        margin-left: -51%;
+        height: 2px;
+        display: block;
+        border-radius: 80px 80px 0 0 ;
+        box-shadow: 0 -2px 6px #666;
+        z-index: -1;
+        }
+    /* Colores WATSAP */
+    .tarjeta.twhatsapp a {
+    color: rgb(255, 255, 255);
+    background-color: #0dfc21;
+    border-top: 2px solid #6bd613;
+    }
+    /* Colores Facebook */
+    .tarjeta.tfacebook a {
+    color: rgb(255, 255, 255);
+    background: #3B559F;
+    border-top: 2px solid #6B83C9;
+    }

@@ -1,0 +1,334 @@
+<div class="container-fluid" id="container">
+    <!--NAVBAR-->
+    <div class="row" id="navbar">
+        <div class="col-sm-3 col-12 d-flex justify-content-center">
+            <img src="img/L-Tlahco.png" width="200" height="200" class="d-inline-block align-top" alt="Tlhaco"
+                id="logo">
+        </div>
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-7 col-12" id="menu">
+            <ul>
+                <li id="item-uno">
+                    <a href="./">Inicio</a>
+                </li>
+                <li id="item-tres" class="snipcart-checkout">
+                    <a href="#">
+                        <span class="snipcart-total-price"></span></a>
+                </li>
+                <!--
+                <li id="item-dos" class="snipcart-customer-signin">
+                    <a href="#"><img src="img/icons/usuario.png" width="35" height="35">Mi cuenta</a>
+                </li>-->
+                {{#if user}}
+                <li id="item-dos">
+                    <a href="/users/logout">Cerrar sesión</a>
+
+                </li>
+                {{else}}
+                <li id="item-dos">
+                    <a href="../">Iniciar sesión</a>
+                </li>
+                {{/if}}
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <section class="row" id="menuTacos">
+        <div class="cartera">
+            <div class="tarjeta tfacebook" id="btnFacebook">
+                <a class="fa-facebook" target="_blank"
+                    href="https://www.facebook.com/Tlaco-100278778526315/?modal=admin_todo_tour"><img
+                        src="img/icons/facebook.png" width="35" height="35"><strong>Facebook</strong></a>
+            </div>
+            <div class="tarjeta twhatsapp" id="btnWats">
+                <a class="fa-whatsapp" target="_blank" href="https://bit.ly/2SsTGmu"><img src="img/icons/whatsapp.png"
+                        width="35" height="35"><strong>Whatsapp</strong></a>
+            </div>
+            {{#if user}}
+            <button class="btn btn-warning comentarios" id="mcome"><a href="/tlahcos">Mis Comentarios</a></button>
+            <button class="btn btn-danger comentarios"><a href="/tlahco/add">Agregar comentario</a></button>
+            {{/if}}
+        </div>
+        <!--MENU -->
+        <div class="col m-2">
+            <hr class="trans--grow hr1">
+            <p class="txtSeparador">LOS MEJORES TACOS LOS ENCUENTRAS EN <strong>TLAHCO</strong></p>
+            <hr class="trans--grow hr2">
+            <!--carousel-->
+            <div class="col" id="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" id="carousel">
+                        <div class="carousel-item active">
+                            <img src="img/taco-C-1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/taco-C-2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/taco-C-3.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Siguiente</span>
+                    </a>
+                </div>
+            </div>
+            <h1 id="tituloMenu"><img src="img/icons/taco.png" width="80" height="80">
+                Menu<img src="img/icons/taco.png" width="80" height="80">
+            </h1>
+
+            <div class="row justify-content-around">
+                <div class="pro col-10 col-sm-10 col-lg-5 m-2 mb-4">
+
+                    <div class="info">
+                        <h4>Tacos</h4>
+                        <ul>
+                            <li>Bisteck</li>
+                            <li>Longaniza</li>
+                            <li>Campechano</li>
+                            <li>Pastor</li>
+                            <li>Chuleta</li>
+                            <li>Chistorra</li>
+                            <li>Alambre</li>
+                        </ul>
+
+                    </div>
+                    <img src="img/M-taco.jpg">
+                    <div class="wrap">
+                        <button class="button snipcart-add-item" data-item-id="tlaco" data-item-price="13"
+                            data-item-url="/" data-item-description="Tacos de asada " data-item-image="img/M-taco.jpg"
+                            data-item-name="Tacos" data-item-custom1-name="Tacos"
+                            data-item-custom1-options="Bisteck|Longaniza|Campechano|Pastor|Chuleta|Chistorra[+4]|Alambre[+4]"
+                            data-item-custom2-name="Verdura" data-item-custom2-type="checkbox"
+                            data-item-custom3-name="Salsa" data-item-custom3-type="checkbox"
+                            data-item-custom4-name="Cebolla asada" data-item-custom4-type="checkbox">Comprar
+                            taquitos</button>
+                    </div>
+                </div>
+
+                <div class="pro col-10 col-sm-10 col-lg-5 m-2 mb-4">
+                    <div class="info">
+                        <h4>Volcanes</h4>
+                        <ul>
+                            <li>Bisteck</li>
+                            <li>Longaniza</li>
+                            <li>Campechano</li>
+                            <li>Pastor</li>
+                            <li>Chuleta</li>
+                            <li>Chistorra</li>
+                            <li>Alambre</li>
+                        </ul>
+                    </div>
+                    <img src="img/volcan.jpg">
+                    <div class="wrap">
+                        <button class="button snipcart-add-item" data-item-id="volcan" data-item-price="17"
+                            data-item-url="/" data-item-description=" " data-item-image="img/volcan.jpg"
+                            data-item-name="Volcanes" data-item-custom1-name="Volcanes"
+                            data-item-custom1-options="Bisteck|Longaniza|Campechano|Pastor|Chuleta|Chistorra[+4]|Alambre[+4]"
+                            data-item-custom2-name="Verdura" data-item-custom2-type="checkbox"
+                            data-item-custom3-name="Salsa" data-item-custom3-type="checkbox"
+                            data-item-custom4-name="Cebolla asada" data-item-custom4-type="checkbox">Comprar
+                            volcanes</button>
+                    </div>
+                </div>
+
+                <div class="pro col-10 col-sm-10 col-lg-5 m-2 mb-4">
+                    <div class="info">
+                        <h4>Gringas</h4>
+                        <ul>
+                            <li>Bisteck</li>
+                            <li>Longaniza</li>
+                            <li>Campechano</li>
+                            <li>Pastor</li>
+                            <li>Chuleta</li>
+                            <li>Chistorra</li>
+                            <li>Alambre</li>
+                        </ul>
+                    </div>
+                    <img src="img/gringa.jpg">
+                    <div class="wrap">
+                        <button class="button snipcart-add-item" data-item-id="gringa" data-item-price="22"
+                            data-item-url="/" data-item-description="Ricas gringas para toda la familia."
+                            data-item-image="img/gringa.jpg" data-item-name="gringas" data-item-custom1-name="gringas"
+                            data-item-custom1-options="Bisteck|Longaniza|Campechano|Pastor|Chuleta|Chistorra[+4]|Alambre[+4]"
+                            data-item-custom2-name="Verdura" data-item-custom2-type="checkbox"
+                            data-item-custom3-name="Salsa" data-item-custom3-type="checkbox"
+                            data-item-custom4-name="Cebolla asada" data-item-custom4-type="checkbox">Comprar
+                            gringas</button>
+                    </div>
+
+                </div>
+                <div class="pro col-10 col-sm-10 col-lg-5 m-2 mb-4">
+                    <div class="info">
+                        <h4>Alitas</h4>
+                        <ul>
+                            <li>BBQ</li>
+                            <li>Maggi</li>
+                        </ul>
+                    </div>
+                    <img src="img/alitas.jpg">
+                    <div class="wrap">
+                        <button class="button snipcart-add-item" data-item-id="alitas" data-item-price="38"
+                            data-item-url="/" data-item-description="alitas asadas - La orden de 4"
+                            data-item-image="img/alitas.jpg" data-item-name="Alitas" data-item-custom1-name="BBQ"
+                            data-item-custom1-type="checkbox" data-item-custom2-name="MAGUI"
+                            data-item-custom2-type="checkbox">Comprar alitas</button>
+                    </div>
+                </div>
+                <div class="pro col-10 col-sm-10 col-lg-5 m-2 mb-4">
+                    <div class="info">
+                        <h4>Alambre</h4>
+                        <ul>
+                            <li>Bisteck</li>
+                            <li>Longaniza</li>
+                            <li>Campechano</li>
+                            <li>Pastor</li>
+                            <li>Chuleta</li>
+                            <li>Chistorra</li>
+                        </ul>
+                    </div>
+                    <img src="img/alambre.jpg">
+                    <div class="wrap">
+                        <button class="button snipcart-add-item" data-item-id="alambre" data-item-price="79"
+                            data-item-url="/" data-item-description="chile morron, champiñones y cebolla asada "
+                            data-item-image="img/M-taco.jpg" data-item-name="Alambre" data-item-custom1-name="Alambre"
+                            data-item-custom1-options="Bisteck|Longaniza|Campechano|Pastor|Chuleta[10]|Chistorra[+10]"
+                            data-item-custom2-name="Verdura" data-item-custom2-type="checkbox"
+                            data-item-custom3-name="Salsa" data-item-custom3-type="checkbox"
+                            data-item-custom4-name="Cebolla asada" data-item-custom4-type="checkbox">Comprar
+                            alambre</button>
+                    </div>
+                </div>
+                <div class="pro col-10 col-sm-10 col-lg-5 m-2 mb-4">
+                    <div class="info">
+                        <h4>Papa Asada</h4>
+                        <ul>
+                            <li>Sencilla</li>
+                            <li>Bisteck</li>
+                            <li>Longaniza</li>
+                            <li>Campechano</li>
+                            <li>Pastor</li>
+                            <li>Chuleta</li>
+                            <li>Chistorra</li>
+                        </ul>
+                    </div>
+                    <img src="img/papa.jpg">
+                    <div class="wrap">
+                        <button class="button snipcart-add-item" data-item-id="papas" data-item-price="28"
+                            data-item-url="/" data-item-description="lleva (Mantequilla, Queso y cebolla asada) "
+                            data-item-image="img/papa.jpg" data-item-name="Papas Aasdas"
+                            data-item-custom1-name="Papas Aasdas"
+                            data-item-custom1-options="Sencilla|Bisteck[+20]|Longaniza[+20]|Campechano[+20]|Pastor[+20]|Chuleta[+20]|Chistorra[+25]"
+                            data-item-custom2-name="Verdura" data-item-custom2-type="checkbox"
+                            data-item-custom3-name="Salsa" data-item-custom3-type="checkbox"
+                            data-item-custom4-name="Cebolla asada" data-item-custom4-type="checkbox">Comprar papa
+                            asada</button>
+                    </div>
+                </div>
+                <div class="pro col-10 col-sm-10 col-lg-5 m-2 mb-4">
+                    <div class="info">
+                        <h4>Refrescos</h4>
+                        <ul>
+                            <li>Coca-Cola</li>
+                            <li>Sidral</li>
+                            <li>Fanta Fresa</li>
+                        </ul>
+                    </div>
+                    <img src="img/refrescos.jpg">
+                    <div class="wrap">
+                        <button class="button snipcart-add-item" data-item-id="refresco" data-item-price="15"
+                            data-item-url="/" data-item-description="Refresc0s" data-item-image="img/refrescos.jpg"
+                            data-item-name="Refrescos" data-item-custom1-name="Alitas"
+                            data-item-custom1-options="Sprite|Sidral|Coca cola">Comprar refrescos</button>
+                    </div>
+                </div>
+                <div class="pro col-10 col-sm-10 col-lg-5 m-2 mb-4">
+                    <div class="info">
+                        <h4>Jugos</h4>
+                        <ul>
+                            <li>Guayaba</li>
+                            <li>Mango</li>
+                        </ul>
+                    </div>
+                    <img src="img/jugos.jpg">
+                    <div class="wrap">
+                        <button class="button snipcart-add-item" data-item-id="jugo" data-item-price="15"
+                            data-item-url="/" data-item-description="jugo boing" data-item-image="img/jugos.jpg"
+                            data-item-name="Jugo" data-item-custom1-name="Jugo"
+                            data-item-custom1-options="Guayaba|mango">Comprar jugos</button>
+                    </div>
+                </div>
+                <div class="pro col-10 col-sm-10 col-lg-5 m-2 mb-4">
+                    <div class="info">
+                        <h4>Agua de Sabor</h4>
+                        <ul>
+                            <li>Tamarindo</li>
+                            <li>Jamaica</li>
+                        </ul>
+                    </div>
+                    <img src="img/aguas.jpg">
+                    <div class="wrap">
+                        <button class="button snipcart-add-item" data-item-id="agua" data-item-price="25"
+                            data-item-url="/" data-item-description="Agua de sabor" data-item-image="img/aguas.jpg"
+                            data-item-name="Agua" data-item-custom1-name="Agua"
+                            data-item-custom1-options="Tamarindo|jamaica">Comprar Aguas</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div class="row" style="margin: 10px;">
+        {{#each coments}}
+        <div class="card" style="margin: 10px;">
+            <div class="card-body">
+                <h4 class="card-title">{{title}}<!--<a href="/tlahco/edit/{{_id}}"><i class="fa fa-pencil"></i></a>--></h4>
+                <h5 style="float: left; margin: 1%;"><span class="badge badge-warning">{{user}}</span>
+                    <h5 style="padding-top: 2%; margin: 1%; font-size: 14px ;color: rgb(194, 193, 193);">{{updatedAt}}
+                    </h5>
+                    <p class="card-text">{{description}}</p>
+                    <!--
+                    <form action="/tlahco/delete/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="method" value="DELETE">
+                        <button type="submit" class="btn btn-danger btn-sm">DELETE </button>
+                    </form>-->
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+    <hr class="trans--grow hr1">
+    <p class="txtSeparador">DISFRUTA NUESTRO STREAMINGS DE <strong>TLAHCO</strong></p>
+    <!--SEPARAOR-->
+    <div class="row justify-content-around">
+        <div class="center-block">
+            <div id="stream-mux"></div>
+        </div>
+    </div>
+    <hr class="trans--grow hr1">
+    <p class="txtSeparador">ENCUENTRA NUESTRAS SUCURSALES</p>
+    <section class="row">
+        <div class="col m-2">
+            <div id="myMap" style="height: 400px; margin: 10px;"></div>
+        </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+</div>

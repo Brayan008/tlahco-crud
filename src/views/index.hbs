@@ -1,0 +1,44 @@
+<head>
+    <link rel="stylesheet" href="/css/registro.css">
+</head>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="/users/signup" method="POST">
+			<h1>Cree su cuenta!</h1>
+			<span>Registrese para formar parte de TLAHCO</span>
+			<input type="text" placeholder="Name" name="name" value="{{name}}"/>
+			<input type="email" placeholder="Email" name="email" value="{{email}}"/>
+			<input type="password" placeholder="Password" name="password"/>
+			<input type="password" placeholder="Confirm Password" name="confirm_pass"/>
+			<button>Registrarse</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="/users/signin" method="POST">
+			<h1>Inicie Sesion</h1>
+			<span></span>
+			<input type="email" placeholder="Email" name="email"/>
+			<input type="password" placeholder="Password" name="password"/>
+
+			<button>Iniciar Sesion</button>
+			<br>
+            <a href="/tlahco" class="boton" style="text-decoration: none;">Entrar sin Registrarse</a>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Regresar a iniciar sesion </h1>
+				<p> Por favor llene los campos para poder registrase en TLAHCO</p>
+				<button class="ghost" id="signIn">Iniciar sesion</button>
+				
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Bienvenido a TLAHCO</h1>
+				<p>Cree una cuenta para poder cometar la experiencia en TLAHCO</p>
+				<button class="ghost" id="signUp">Registrarse</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/js/forms.js"></script>

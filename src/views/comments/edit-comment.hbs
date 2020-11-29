@@ -1,0 +1,26 @@
+<head>
+    <link rel="stylesheet" href="/css/registro.css">
+</head>
+<h2>TLAHCO<br> "Los Sabrosotes"</h2>
+<div class="container" id="container">
+	<div class="form-container sign-in-container">
+		<form action="/tlahco/edit/{{coment._id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+			<h1>Edita tu comentario/opinion</h1>
+			<span></span>
+			<input type="text" value="{{coment.title}}" name="title"/>
+			<textarea name="description" class="form-control">{{coment.description}}</textarea>
+            <button>Enviar</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-right">
+				<h1>Gracias por estar interactuando con nuestro sitio web</h1>
+				<p>Aqui podras editar tu comentario/opinion aserca de nuestro servicio.</p>
+				<a href="/tlahco" class="boton" style="text-decoration: none;">Regresar</a>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/js/forms.js"></script>

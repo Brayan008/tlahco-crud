@@ -1,0 +1,39 @@
+@media (max-width: 576px) { 
+    #menu{
+        margin-top: 0px;
+    }
+    #menuTacos .info ul li{
+          font-size: 15px;
+    }
+
+    .pro .info h4{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 440px){
+    #menuTacos .info ul li{
+        font-size: 12px;
+  }
+
+  #menuTacos #tituloMenu{
+    letter-spacing: 30px;
+    }
+
+  .pro .info h4{
+      font-size: 30px;
+  }
+   
+}
+
+/*RESPONSIVE PARA 993 - 1199*/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+    .pro .info h4{
+        font-size: 40px;
+    }
+
+    #menuTacos .info ul li{
+        font-size: 15px;
+  }
+
+}
